@@ -1,0 +1,171 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos contatos</title>
+    <link rel="shortcut icon" href="UBSCONECTA.png.png" type="image/x-icon">
+    <style>
+                body{
+            background-image: url(https://images.unsplash.com/photo-1671347020855-8f35d210ee9a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBsYW5vJTIwZGUlMjBmdW5kbyUyMHdlYnNpdGV8ZW58MHx8MHx8fDA%3D);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: bottom;
+            margin: 0;
+            
+        }
+        .cabecalho{
+            background-color: #fafa00;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #03045e;
+            font-size: 17px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .sub-links{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 35%;
+            background-color: transparent;
+            width: 450px;
+            height: 30px;
+        }
+        .botao-ubs, .duvidas, .ficha, .sobre-nos{
+            width: 80px;
+            height: 25px;
+            margin-right: 5px;
+            color: black;
+            background-color: transparent;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .sobre-nos, .botao-ubs{
+            width: 80px;
+        }
+        .ficha{
+            width: 130px;
+        }
+        .botao-ubs:hover, .duvidas:hover, .ficha:hover, .sobre-nos:hover{
+            background-color: rgba(255,255,255,0.9);
+            border: 2px solid transparent;
+            border-top: 2px solid #f9172b;
+            border-bottom: 2px solid #023e8a;
+            color: black;
+        }
+      .corpo{
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+        .duvida{
+            background-color: #008000;
+            color: white;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 520px;
+            height: auto;
+            border: 2px solid #f9172b;
+            border-radius: 15px;padding: 10px;
+        }
+        textarea{
+            max-width: 520px;
+            max-height: 320px;
+            background-color: #fff2b2;
+            width: 520px;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: black;   
+            border: 2px solid #03045e;
+            border-radius: 10px;
+        }
+        input[type="text"],input[type="email"]{
+            background-color: #fff2b2;
+            width: 520px;
+            height: 40px;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: black;
+            border: 2px solid #03045e;
+            border-radius: 10px;
+        }
+        textarea:hover, input[type="text"]:hover,input[type="email"]:hover{
+            background-color: rgba(255,255,255,0.9);
+            border: 2px solid #f9172b;
+        }
+        .botoes{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #bt{
+            background-color: #023e8a;
+            width: 80px;
+            height: 40px;
+            font-size: 15px;
+            border: 2px solid #fafa00;
+            border-radius: 15px;
+            color: white;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #bt:hover{
+            transform: scale(1.2);
+            transition: 0.2s;
+        }
+    </style>
+</head>
+<body>
+        <div class="cabecalho">
+        <img src="Logo UBSCONECTA1 - Canva.png" width="100px" height="100px" alt="logo-ubs-conecta">
+        <h1>UBS CONECTA</h1>
+        <div class="sub-links">
+        <button onclick="abrirHome('projeto.html')" class="sobre-nos">Início</button>
+        <button onclick="abrirUbs('unidades.html')" class="botao-ubs" >UBS's</button>
+        <button onclick="abrirContatos('duvidas.html')" class="duvidas">Dúvidas?</button>
+        <button onclick="abrirFicha('ficha.html')" class="ficha">Faça já sua ficha</button>
+            <script>
+                function abrirHome(sobre){
+                    window.location.href = sobre;
+                }
+                function abrirUbs(ubs){
+                    window.location.href = ubs;
+                }
+                function abrirContatos(duvidas){
+                    window.location.href = duvidas;
+                }
+                function abrirFicha(ficha){
+                    window.location.href = ficha;
+                }
+            </script>
+    </div>
+    </div>
+    <div class="corpo">
+        <div class="duvida">
+            <form action="" method="post">
+            <p>Nome:<input type="text" required name="nome" id="nome" placeholder="Digite seu nome..."></p>
+            <p>E-mail:<input type="email" required name="email" id="email" placeholder="Digite seu email..."></p>
+            <p>Dúvidas ou comentários:<br><textarea name="dc" id="dc" cols="30" rows="10" placeholder="Digite seu comentário, dúvida, sugestão etc..."></textarea></p>
+                <div class="botoes">
+                    <button id="bt" type="submit" onclick="enviar()">Enviar</button>
+                    <button id="bt" type="reset" onclick="cancelar()">Cancelar</button>
+                </div>
+                <script>
+                    function enviar(){
+                        window.alert("Comentário sendo enviado!");
+                    }
+                    function cancelar(){
+                       window.alert("Vamos apagar tudo!");
+                    }
+                </script>
+            </form>
+        </div>
+    </div>
+ 
+</html>
